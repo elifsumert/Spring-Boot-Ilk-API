@@ -1,6 +1,7 @@
 package com.elifsu.ilk_apim;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController // mutfak kısmı dışarıdan gelen bağlantıları ve istekleri bu sınıfın içinde karşılayacağız
@@ -14,4 +15,13 @@ public class MerhabaController {
     public String ikinciMesaj() {
     	return "Ikinci endpoint basariyla calisiyor.";
     }
+    
+    @GetMapping("/hosgeldin")
+    public String hosgeldinMesaji(@RequestParam(value = "isim", defaultValue = "Misafir") String ad) {
+        return "Harika bir gun, " + ad + "! Backend dünyasında adim adim ilerliyoruz.";
+    }
+    
+    
+    
+    
 }
