@@ -12,6 +12,6 @@ public class MerhabaController {
     }
     @GetMapping("/selam")
     public String ikinciMesaj() {
-    	return "selam aşkolarrr";
+    	return "Ikinci endpoint basariyla calisiyor.";
     }
 }
